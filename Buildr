@@ -1,0 +1,36 @@
+#!/usr/bin/ruby
+require 'thor'
+class Buildr < Thor
+    desc 'build', 'Builds a new deployable shell'
+    option :list, :default => 'Buildr.lst'
+    option :out, :default => 'bin/shell.php'
+    def build
+        list = options[:list]
+        out = Dir.getwd() + '/' + options[:out]
+
+        File.open(out, 'w').write "<?php\n" + squash(expand_list(list, Dir.getwd))
+    end
+
+    no_commands do
+        def squash(list)
+            full = ''
+            list.each do |file|
+                full += File.read(file).gsub /\<\?php\n/, ''
+            end
+            full
+        end
+
+        def expand_list(list, wd)
+            file_list = Array.new
+            File.open(list, 'r') do |file|
+                file.each do |line|
+                    path = "#{wd}/#{line.chop}"
+                    file_list += Dir.glob(path)
+                end
+            end
+            file_list
+        end
+    end
+end
+
+Buildr.start(ARGV)
