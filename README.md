@@ -3,6 +3,9 @@ Shell
 
 PHP Web shell (backdoor) based of off WSO. Includes build script and stuff.
 
+## Screenshot
+![Alpha](https://github.com/mal-project/shell/blob/master/bin/screenshot.png?raw=true)
+
 ## Contact and Feedback
 
 If you'd like to contribute to the project or file a bug or feature request, please visit [the project page][1].
