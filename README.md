@@ -1,7 +1,7 @@
 Shell
 ==========
 
-PHP Web shell (backdoor) based of off WSO. Includes build script and stuff.
+PHP Web shell (backdoor) based off WSO. Includes build script and stuff.
 
 ## Screenshot
 ![Alpha](https://github.com/mal-project/shell/blob/master/bin/screenshot.png?raw=true)
